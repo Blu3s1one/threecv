@@ -1,0 +1,108 @@
+{
+    "cities": [
+        {
+            "name": "Saint Germain en Laye",
+            "lat": 48.898908,
+            "long": 1.803761,
+            "tag": 0,
+            "description":[
+                {
+                    "title": "Lycée Jeanne d'Albret",
+                    "text": "Filière S, spécialité Mathématiques avec option européenne allemand."
+                },
+                {
+                    "title": "MPSI & MP",
+                    "text": "Poursuite des études au sein du lycée Jeanne d'Albret dans la filière MPSI puis MP."
+                }
+            ]
+        },
+        {
+            "name": "Brest",
+            "lat": 48.390394,
+            "long": -4.486076,
+            "tag": 0,
+            "description":[
+                {
+                    "title": "IMT Atlantique: 1ère et 2ème années",
+                    "text": "Spécialisation en Data Science avec un intérêt particulier pour le Deep Learning."
+                }
+            ]
+        },
+        {
+            "name": "Nantes",
+            "lat": 47.218371,
+            "long": -1.553621,
+            "tag": 0,
+            "description":[
+                {
+                    "title": "IMT Atlantique: 3ème année",
+                    "text": "Spécialisation en Développement Logiciel avec une composante Big Data."
+                },
+                {
+                    "title": "IMT Atlantique: Projet de fin d'études",
+                    "text": "Participation à une course de voiture autonomes. Entraînement d'un modèle par Renforcement."
+                }
+            ]
+        },
+        {
+            "name": "Dakar",
+            "lat": 14.7645042,
+            "long": -17.3660286,
+            "tag": 1,
+            "description":[
+                {
+                    "title": "Voyage humanitaire",
+                    "text": "Avec les Scouts et Guides de France et une équipe de 9 compagnons, voyage auto-financé dans la banlieue de Dakar."
+                }
+            ]
+        },
+        {
+            "name": "Bogota",
+            "lat": 4.624335,
+            "long": -74.063644,
+            "tag": 1,
+            "description":[
+                {
+                    "title": "Voyage tourisme",
+                    "text": "3 mois de voyage en Colombie à l'occasion d'une césure."
+                }
+            ]
+        },
+        {
+            "name": "Lorient",
+            "lat": 47.7482524,
+            "long": -3.3702449,
+            "tag": 2,
+            "description":[
+                {
+                    "title": "CDD: Détection d'oiseaux dans le port de Lorient",
+                    "text": "Mission de 2 mois faisant suite à une étude de faisabilité effectuée en tant que projet étudiant. La mission consistait à créer un outil documenté de détection d'oiseaux et de nids  sur des images de drones dans le port de Lorient."
+                }
+            ]
+        },
+        {
+            "name": "Paris",
+            "lat": 48.856614,
+            "long": 2.5522219,
+            "tag": 2,
+            "description":[
+                {
+                    "title": "Stage de 2ème année: EPHE",
+                    "text": "Stage de 6 mois pour l'Ecole Pratique des Hautes Etudes, au sein d'une équipe travaillant sur un outil d'OCR pour numériser des textes anciens, avec un focus sur la langue arabe. Développement d'une méthode de Data Augmentation pour améliorer les performances du modèle. "
+                }
+            ]
+        },
+        {
+            "name": "Elancourt",
+            "lat": 48.382907,
+            "long": 1.960077,
+            "tag": 2,
+            "description":[
+                {
+                    "title": "Stage de fin d'études: Airbus Defence & Space",
+                    "text": "Stage de 6 mois au sein d'une équipe de R&T composée de Data Scientists. Développement d'un outil de création automatique de données d'entraîenemnt pour la détection de changements."
+                }
+            ]
+        }
+    ]
+}
