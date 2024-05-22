@@ -1,16 +1,8 @@
 /* eslint-disable */
 import * as THREE from "three";
-import * as React from "react";
-import { useRef, useState } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { useLoader } from "@react-three/fiber";
-import { TextureLoader } from "three";
-import WoodTexture from "../assets/wood.jpg"
+import {  useState } from "react";
 
 function Buildings( props:{position:THREE.Vector3}) {
-    const [woodMap] = useLoader(TextureLoader, [
-        WoodTexture
-      ]);
     
     
     
@@ -28,7 +20,7 @@ function Buildings( props:{position:THREE.Vector3}) {
         }
     }
     
-    const [windows_, setwindows] = useState(windows)
+    const [windows_, _] = useState(windows)
 
     return (
         <>

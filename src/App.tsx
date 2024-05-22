@@ -1,18 +1,7 @@
 /* eslint-disable */
 import * as THREE from "three";
-import * as React from "react";
-import { useRef, useState } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { useLoader } from "@react-three/fiber";
-import { TextureLoader } from "three";
-import EarthTexture from "./assets/earth.jpeg";
-import EarthClouds from "./assets/8k_earth_clouds.jpeg";
-import EarthNormal from "./assets/8081_earthbump10k.jpg";
-import EarthSpecular from "./assets/8081_earthspec10k.jpg";
-import { OrbitControls, useHelper, useScroll } from "@react-three/drei";
-import { MeshPhongNodeMaterial, label } from "three/examples/jsm/nodes/Nodes.js";
-import { CSS2DRenderer, ThreeMFLoader } from "three/examples/jsm/Addons.js";
-import { Html } from "@react-three/drei"
+import { useState } from "react";
+import { Canvas } from "@react-three/fiber";
 import { Globe } from "./components/Globe";
 import { Table } from "./components/Table";
 import { Wall } from "./components/Wall";
@@ -21,11 +10,7 @@ import { Buildings } from "./components/Buildings";
 import { Window } from "./components/Window";
 import { CV } from "./components/CV";
 import { Lights } from "./components/Lights";
-import { Scroll } from "@react-three/drei";
-import { DirectionalLightHelper } from "three";
-import { DirectionalLight } from "three";
 import { Button } from "./components/Button";
-import { Box } from "./components/Box";
 
 export default function App() {
   const [lightOn, click] = useState(false);

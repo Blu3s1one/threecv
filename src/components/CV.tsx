@@ -1,24 +1,21 @@
 /* eslint-disable */
 import * as THREE from "three";
-import * as React from "react";
 import { useRef, useState } from "react";
-import { Canvas, ThreeElements, useFrame } from "@react-three/fiber";
+import { useFrame } from "@react-three/fiber";
 import { useLoader } from "@react-three/fiber";
 import { TextureLoader } from "three";
 import CvTextureHD from "../assets/CVPGFR.png"
-import { ScrollControls, useScroll } from "@react-three/drei";
-import { Scroll } from "@react-three/drei";
 
 function CV() {
     const [clicked, click] = useState(true);   
     return (
         !clicked?
-        <mesh onPointerMissed={(event) => click(!clicked)}>
+        <mesh onPointerMissed={(_) => click(!clicked)}>
             <CVZoom></CVZoom>
         </mesh>
         
         :
-        <mesh onClick={(event) => click(!clicked)}>
+        <mesh onClick={(_) => click(!clicked)}>
             <CVTable></CVTable>
         </mesh>
         
@@ -32,8 +29,8 @@ function CVTable(){
     const [hovered, hover] = useState(false);
     return (
         <group ref={group}
-        onPointerOver={(event) => hover(true)}
-        onPointerOut={(event) => hover(false)}>
+        onPointerOver={(_) => hover(true)}
+        onPointerOut={(_) => hover(false)}>
             <mesh position = {[0,-2.5,0]}>
                 <boxGeometry args={[1.4,0.01,2]}></boxGeometry>
                 <meshStandardMaterial map={cvHdMap} ></meshStandardMaterial>
@@ -64,7 +61,7 @@ function CVZoom(){
         }
     });
 
-    useFrame((state, delta) => (mesh.current.position.y = 0 + scrollAmount))
+    useFrame( _ => (mesh.current.position.y = 0 + scrollAmount))
     
     return (
     <mesh ref = {mesh} position={[0,0,4.2]}>

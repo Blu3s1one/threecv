@@ -1,8 +1,6 @@
 /* eslint-disable */
 import * as THREE from "three";
-import * as React from "react";
 import { useRef, useState } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
 import { Html } from "@react-three/drei"
 import { Description, Tag} from "./Globe";
 
@@ -40,10 +38,10 @@ function City(props: {position:THREE.Vector3, name:string, tag:Tag, description:
         {...props}
         ref={ref}
         scale={clicked ? 1 : 0.5}
-        onClick={(event) => click(!clicked)}
-        onPointerOver={(event) => hover(true)}
-        onPointerOut={(event) => hover(false)}
-        onPointerMissed={ (event) => close()}
+        onClick={(_) => click(!clicked)}
+        onPointerOver={(_) => hover(true)}
+        onPointerOut={(_) => hover(false)}
+        onPointerMissed={ (_) => close()}
       >
         <sphereGeometry args={[0.01, 32, 32]} />
         <meshStandardMaterial color={hovered ? "hotpink" : "orange"} />

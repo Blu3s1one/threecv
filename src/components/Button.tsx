@@ -1,8 +1,6 @@
 import * as THREE from "three";
 import * as React from "react";
 import { useRef, useState } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { rotate } from "three/examples/jsm/nodes/Nodes.js";
 
 type Props = {
     switchLight: React.Dispatch<React.SetStateAction<boolean>> ;
@@ -26,9 +24,9 @@ function Button( {switchLight}:Props){
 
     return (
         <group ref={group} position={[12,4,-3.5]}
-        onClick={(event) => rotate(clicked)}
-        onPointerOver={(event) => hover(true)}
-        onPointerOut={(event) => hover(false)}
+        onClick={(_) => rotate(clicked)}
+        onPointerOver={(_) => hover(true)}
+        onPointerOut={(_) => hover(false)}
         rotation-x={-0.1}
         >
             <mesh>

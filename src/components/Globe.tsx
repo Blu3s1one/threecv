@@ -2,12 +2,10 @@
 import * as THREE from "three";
 import * as React from "react";
 import { useRef, useState } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import {  useFrame } from "@react-three/fiber";
 import { City } from "./City.tsx"
 import { Earth } from "./Earth.tsx";
 import * as data from "../data/cities.json"
-import { useGesture} from "@use-gesture/react";
-import { useSpring, a } from "@react-spring/three";
 
 
 enum Tag{
@@ -97,21 +95,21 @@ function Globe() {
         setScrollPosition(newScrollAmount)
     }});
 
-  useFrame((state, delta) => 
+  useFrame(_ => 
     {ref.current.rotation.y += speed})
       
   return (
     <group 
     position={small? [-4,-1,0]:[0,0,scrollPosition]}
     ref={ref}
-    onPointerOver={(event) => hover(true)}
-    onPointerOut={(event) => hover(false)}
-    onClick={ (event) => {
+    onPointerOver={(_) => hover(true)}
+    onPointerOut={(_) => hover(false)}
+    onClick={ (_) => {
         if (small){
           view(!small)
         }
     }}
-    onPointerMissed={ (event) => {
+    onPointerMissed={ (_) => {
       if (!small){
         view(!small)
       }
@@ -119,7 +117,7 @@ function Globe() {
     onPointerDown={(event) => rotationController(event)}
     onPointerUp={(event) => rotationController(event)}
     onPointerMove={(event) => rotate(event)}
-    onPointerLeave={(event) => leave()}>
+    onPointerLeave={(_) => leave()}>
       <Earth clicked={small} />
       {cities.map((city) => (
         !small && <City position={sphericalToCartesian(city.lat, city.long)} name={city.name} tag={city.tag} description={city.description} selectedEarth={clicked} />

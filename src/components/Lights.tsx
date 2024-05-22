@@ -1,10 +1,6 @@
 /* eslint-disable */
 import * as THREE from "three";
-import * as React from "react";
-import { useRef, useState } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { City } from "./City.tsx"
-import { Earth } from "./Earth.tsx";
+import { useRef  } from "react";
 import { useHelper } from "@react-three/drei";
 import { DirectionalLightHelper, PointLightHelper } from "three";
 

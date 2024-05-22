@@ -1,8 +1,4 @@
 /* eslint-disable */
-import * as THREE from "three";
-import * as React from "react";
-import { useRef, useState } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
 import { useLoader } from "@react-three/fiber";
 import { TextureLoader } from "three";
 import WallTexture from "../assets/white-wall-textures.jpg"
