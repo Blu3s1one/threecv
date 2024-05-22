@@ -37,7 +37,7 @@ function City(props: {position:THREE.Vector3, name:string, tag:Tag, description:
       <mesh
         {...props}
         ref={ref}
-        scale={clicked ? 1 : 0.5}
+        scale={hovered ? 1 : 0.5}
         onClick={(_) => click(!clicked)}
         onPointerOver={(_) => hover(true)}
         onPointerOut={(_) => hover(false)}

@@ -14,7 +14,6 @@ import { Button } from "./components/Button";
 
 export default function App() {
   const [lightOn, click] = useState(false);
-
   const b1 = new THREE.Vector3(-12,-1,-5)
   const b2 = new THREE.Vector3(-5,-2,-10)
   const b3 = new THREE.Vector3(2,0,-7)
@@ -37,8 +36,6 @@ export default function App() {
       <Window lightOn={!lightOn}></Window> 
       <CV></CV>
       <Button switchLight={click}></Button>
-     
-      
     </Canvas>    
   );
 }
